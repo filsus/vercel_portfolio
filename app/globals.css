@@ -26,6 +26,26 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.vertical-timeline-element-icon {
+  box-shadow: none; 
+ }
+
+
+html {
+  height: 100%;
+}
+
+.node {
+  position: absolute;
+}
+
+.node-rectangle {
+  width: 100px;
+  height: 50px;
+  background-color: #ffffff; /* White background color */
+  border: 1px solid #000000; /* Black border */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
