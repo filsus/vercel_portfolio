@@ -12,6 +12,7 @@ const App = () => {
   const layerRef = useRef(null);
   const stageRef = useRef(null);
   const [scale, setScale] = useState(1);
+  const [height, setHeight] = useState(800);
   const [selectedNode, setSelectedNode] = useState(null);
 
   const isCursorOverAnyShape = () => {
@@ -203,6 +204,16 @@ const App = () => {
       const windowWidth = window.innerWidth;
       const newStageX = windowWidth / 2 - (windowWidth/23);
       setStageX(newStageX);
+      if (windowWidth < 800) {
+        setScale(0.5);
+        setHeight(400)
+      } else if (windowWidth < 1000) {
+        setScale(0.75);
+        setHeight(600)
+      } else {
+        setScale(1);
+        setHeight(800)
+      }
     }
   };
 
@@ -229,12 +240,24 @@ const App = () => {
   }, []);
 
   return (
-    <div id="contact" className="bg-slate-800 min-h-[800px]">
+    <div id="contact" >
+    <div className="text-center">
+    <h1 className="text-2xl sm:text-2xl lg:text-4xl lg:leading-normal font-extrabold" >
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-500">
+      CONNECT WITH ME
+      </span>
+    </h1>
+    <h2 className="text-[#ADB7BE] text-base sm:text-lg mb-12 py-4 lg:text-xl">
+    Experienced compositors, proceed as usual. <br></br>
+    <span className="text-[#72818b] text-base sm:text-[12px] mb-12 py-4 lg:text-lg">Drag the arrow and connect it with one of nodes to get redirected.</span>
+      </h2>      
+  </div>
+    <div className="bg-slate-800 min-h-[200px]">
     <Stage
       width={5000}
-      height={800}
-      scaleX={1}
-      scaleY={1}
+      height={height}
+      scaleX={scale}
+      scaleY={scale}
       ref={stageRef}
       onMouseDown={handleClick}
       x={stageX}
@@ -300,6 +323,7 @@ const App = () => {
         />
       </Layer>
     </Stage>
+    </div>
     </div>
   );
 };

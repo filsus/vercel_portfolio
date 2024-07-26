@@ -1,17 +1,18 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 interface CardProps {
   image: string;
+  imagelink: string;  
 }
 
-const Card: React.FC<CardProps> = ({ image }) => {
+const Card: React.FC<CardProps> = ({ image, imagelink }) => {
   const [showOverlay, setShowOverlay] = useState(false);
 
   return (
     <motion.div
-      className="relative overflow-hidden lg:h-[397px] lg:w-[270px] w-[135px] h-[199px] bg-slate-400 rounded-3xl flex justify-center items-center border-collapse"
+      className="relative overflow-hidden w-[135px] h-[199px] lg:h-[397px] lg:w-[270px] sm:w-[135px] sm:h-[199px] md:h-[300px] md:w-[200px] bg-slate-400 rounded-3xl flex justify-center items-center border-collapse"
       key={image}
       onHoverStart={() => setShowOverlay(true)}
       onHoverEnd={() => setShowOverlay(false)}
@@ -32,7 +33,7 @@ const Card: React.FC<CardProps> = ({ image }) => {
               animate={{ y: 0 }}
               exit={{ y: 10 }}
             >
-              <span>Explore Now</span>
+              <Link href={imagelink}><span>See on IMDb</span></Link>
             </motion.h1>
           </motion.div>
         )}

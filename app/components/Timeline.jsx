@@ -13,7 +13,7 @@ const experiences = [
     href: "https://www.fixfx.uk/"
   },
   {
-    company_name: 'Actively started developing Shotgun/Shotgrid/Flow PT based pipelines.',
+    title: 'Actively started developing Shotgun/Shotgrid/Flow PT based pipelines.',
     icon: '/images/milestone.svg', // Add icon URL here if available
     iconBg: '#333333',
     date: 'Oct 2022',
@@ -21,7 +21,7 @@ const experiences = [
   },
   {
     title: 'MSC Artificial Inteligence for Media',
-    company_name: 'Masters degree at Bournemouth University',
+    company_name: 'Bournemouth University',
     icon: '/images/company/bu.png', // Add icon URL here if available
     iconBg: '#333333',
     date: 'Sep 2022 - Sep 2023',
@@ -29,7 +29,7 @@ const experiences = [
     href: "https://www.bournemouth.ac.uk/"
   },
   {
-    company_name: 'Actively started developing AI/ML based applications and tools.',
+    title: 'Actively started developing AI/ML based applications and tools.',
     icon: '/images/milestone.svg', // Add icon URL here if available
     iconBg: '#333333',
     date: 'Jun 2022',
@@ -73,15 +73,15 @@ const experiences = [
     
   },
   {
-    company_name: 'Actively started developing Python based applications and tools.',
+    title: 'Actively started developing Python based applications and tools.',
     icon: '/images/milestone.svg', // Add icon URL here if available
     iconBg: '#333333',
     date: 'Sep 2020',
     color: "#121212"
   },
   {
-    title: 'Compozitive Academy',
-    company_name: 'Online VFX Compositing Academy',
+    company_name: 'Compozitive',
+    title: 'Online VFX Compositing Academy',
     icon: '/images/company/compozitive.svg', // Add icon URL here if available
     iconBg: '#333333',
     date: 'Aug 2019 - Present',
@@ -89,7 +89,7 @@ const experiences = [
     href: "https://compozitive.com/sk"
   },
   {
-    company_name: 'Actively started compositing using Nuke.',
+    title: 'Actively started compositing using Nuke.',
     icon: '/images/milestone.svg', // Add icon URL here if available
     iconBg: '#333333',
     date: 'Jan 2019',
@@ -97,7 +97,7 @@ const experiences = [
   },
   {
     title: 'BA Film Visual Effects',
-    company_name: 'Bachelors degree at Solent University',
+    company_name: 'Solent University',
     icon: '/images/company/solent.png', // Add icon URL here if available
     iconBg: '#333333',
     date: 'Sep 2018 - Jun 2021',
@@ -127,7 +127,7 @@ const ExperienceCard = ({ experience }) => {
       color: experience.color
     }}
     date={experience.date}
-    dateClassName='text-white'
+    dateClassName='text-gray-200'
     iconStyle={{ background: '#101010', boxShadow: 'none' }}
     icon={
       
@@ -136,7 +136,7 @@ const ExperienceCard = ({ experience }) => {
           <img
             src={experience.icon}
             alt={experience.company_name}
-            className="w-[75%] h-[75%] object-contain"
+            className="w-[75%] h-[75%] object-contain "
           />
         </a>
       </div>
@@ -145,19 +145,18 @@ const ExperienceCard = ({ experience }) => {
   >
     <div>
       <p
-        className="text-[22px] tracking-[1px] text-gray-400"
-        style={{ margin: 0 }}
+        className="text-[22px] tracking-[1px] text-gray-500"
       >
-        {experience.company_name}
+        {experience.title}
       </p>
       <h3 className="text-[24px] font-bold tracking-[2px]">
-        {experience.title}
+        {experience.company_name}
       </h3>
 
       <div>
-      {experience.title && (
+      {experience.company_name && (
         <div className="flex justify-end">
-          <button onClick={toggleParagraphVisibility} className="text-gray-600">
+          <button onClick={toggleParagraphVisibility} className="text-gray-500 font-semibold text-xs">
             {isParagraphVisible ? 'see less ↑' : 'see more ↓'}
           </button>
         </div>

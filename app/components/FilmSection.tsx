@@ -5,18 +5,19 @@ import useMeasure from "react-use-measure"
 import { useEffect, useState } from "react";
 
 export default function FilmSection() {
-    const images = [
-      '/images/posters/anezka.png',
-      '/images/posters/bcs.png',
-      "/images/posters/civil_war.png",
-      "/images/posters/homo_verum.png",
-      "/images/posters/ldr.png",
-      "/images/posters/lotr.png",
-      "/images/posters/outlander.png",
-      "/images/posters/tlm.png",
-      "/images/posters/bos.png",
-      "/images/posters/nau.png",
-    ];
+  const images = [
+    { src: '/images/posters/anezka.png', link: 'https://www.imdb.com/title/tt10502770/' },
+    { src: '/images/posters/bcs.png', link: 'https://www.imdb.com/title/tt3032476/' },
+    { src: '/images/posters/civil_war.png', link: 'https://www.imdb.com/title/tt17279496/' },
+    { src: '/images/posters/homo_verum.png', link: 'https://www.imdb.com/title/tt14552246/' },
+    { src: '/images/posters/ldr.png', link: 'https://www.imdb.com/title/tt20193098/' },
+    { src: '/images/posters/lotr.png', link: 'https://www.imdb.com/title/tt7631058/' },
+    { src: '/images/posters/outlander.png', link: 'https://www.imdb.com/title/tt3006802/' },
+    { src: '/images/posters/tlm.png', link: 'https://www.imdb.com/title/tt5971474/' },
+    { src: '/images/posters/bos.png', link: 'https://www.imdb.com/title/tt15435876/' },
+    { src: '/images/posters/nau.png', link: 'https://www.imdb.com/title/tt15286302/' },
+  ];
+
     const FAST_DURATION = 25;
     const SLOW_DURATION = 75;
   
@@ -59,7 +60,7 @@ export default function FilmSection() {
   
     return (
       <section 
-      className="relative overflow-hidden py-20 bg-no-repeat"
+      className="relative overflow-hidden py-12 bg-no-repeat"
       id= 'filmography'
       style={{
         left: '50%',
@@ -74,7 +75,7 @@ export default function FilmSection() {
         </h1>
         <h2 className="text-[#ADB7BE] text-base sm:text-lg mb-12 py-4 lg:text-xl">Feature Films and TV Series I&apos;ve Contributed to with Incredible VFX Teams.</h2>
       </div>
-      <div className="h-[400px] bg-no-repeat ">  
+      <div className="sm:h-[150px] md:h-[300px] lg:h-[400px]  h-[150px] bg-no-repeat">  
         <motion.div
           className="absolute left-0 flex gap-8 bg-no-repeat"
           style={{ x: xTranslation }}
@@ -89,7 +90,7 @@ export default function FilmSection() {
           }}
         >
           {[...images, ...images].map((item, idx) => (
-            <Card image={`${item}`} key={idx} />
+            <Card image={`${item.src}`} key={idx} imagelink={item.link}/>
           ))}
         </motion.div>
       </div>

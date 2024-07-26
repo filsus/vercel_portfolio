@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -6,7 +7,8 @@ const Footer = () => {
   <h1 className="opacity-50">Copyright © 2024 Filip Suska.</h1>
   <h1 className=" opacity-25"> All rights reserved.  </h1>
   <div className="mt">
-    <img src={"/images/suska.png"} width={100} height={100} alt='Image' className="mx-auto" />
+    <Link href={"/"}><img src={"/images/suska.png"} width={100} height={100} alt='Image' className="mx-auto" /></Link>
+    
   </div>
   {/* <h2 className="">
     ['ʃuːʃkə]
