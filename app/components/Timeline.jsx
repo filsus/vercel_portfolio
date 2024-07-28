@@ -157,7 +157,7 @@ const experiences = [
     href: "https://www.solent.ac.uk/",
     description: <div class="p-4 font-light">
     <ul class="list-disc list-inside">
-        <li>Bachelor's degree in VFX for Film.</li><br></br>
+        <li>Bachelor&apos;s degree in VFX for Film.</li><br></br>
         <li>Acquired a full understanding of the VFX pipeline and explored various disciplines within the realm.</li><br></br>
         <li>Completed a final major project specializing in Nuke compositing, which was awarded the <a href='https://www.therookies.co/entries/13327' className='font-semibold underline'>Rookies finalist award</a>.</li><br></br>
         <li>Graduated with distinction.</li>
