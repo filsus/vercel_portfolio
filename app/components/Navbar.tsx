@@ -55,10 +55,18 @@ const Navbar = () => {
 <nav className={`fixed mx-auto border border-[#ffffff0e] top-0 left-0 right-0 z-50 transition-all
       ${navbarOpen ? 'bg-[#1a2b3fef] opacity-100 duration-0' : scrolled ? 'bg-[#1a2b3fef] opacity-100 duration-500' : 'bg-transparent opacity-75 duration-500'}`}>
       <div className="flex container lg:py-6 flex-wrap items-center justify-between mx-auto px-10 py-2">
-        <Link href="/" className={`relative text-white font-thin h-6 ${imageAnimate ? 'animate-from-left' : ''}`}>
-          <span className={`transition-opacity duration-500 ${textVisible ? 'opacity-100' : 'opacity-0'}`}>[&apos;ʃuːʃkə]</span>
-          <img src="/images/suska.png" width={75} height={75} alt="Image" className={`relative left-12 -top-12 transition-transform duration-500 ${imageAnimate ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`} />
-        </Link>
+      <Link href="/" className={`hover:scale-105 relative text-white font-thin h-6 ${imageAnimate ? 'animate-from-left' : ''}`}>
+        <span className={`transition-opacity duration-500 ${textVisible ? 'opacity-100' : 'opacity-0'}`}>
+          [&apos;ʃuːʃkə]
+        </span>
+        <img
+          src="/images/suska.png"
+          width={75}
+          height={75}
+          alt="Image"
+          className={`relative left-12 -top-12 transition-transform duration-500 transform hover:scale-110 ${imageAnimate ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}
+        />
+      </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button onClick={() => setNavbarOpen(true)} className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
