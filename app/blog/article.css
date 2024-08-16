@@ -1,0 +1,165 @@
+/* Styles for the Markdown content */
+.markdown-content {
+    color: #d3d3d3; /* Light gray text */
+    font-size: 16px;
+    margin: 00px 0px 10px 10px
+   
+  }
+  /* Bold text */
+.markdown-content strong, 
+.markdown-content b {
+    color: #ffffff; /* White text for bold content */
+}
+  /* Links */
+  .markdown-content a {
+    color: #007bff; /* Example primary color */
+    font-weight: 700;
+    text-decoration: none;
+  }
+  
+  .markdown-content a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Headings */
+  .markdown-content h1 {
+    color: #ffffff; /* White text */
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 25px 50px 15px;
+    margin-left: 0; /* Remove left margin */
+  }
+  
+  .markdown-content h2 {
+    color: #ffffff; /* White text */
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 25px 50px 15px;
+    margin-left: 0; /* Remove left margin */
+  }
+  
+  .markdown-content h3 {
+    color: #ffffff; /* White text */
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 25px 50px 15px;
+    margin-left: 0; /* Remove left margin */
+  }
+  
+  .markdown-content h4 {
+    color: #ffffff; /* White text */
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 25px 50px 15px;
+    margin-left: 0; /* Remove left margin */
+  }
+  
+  .markdown-content h5,
+  .markdown-content h6 {
+    color: #ffffff; /* White text */
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 25px 50px 15px;
+    margin-left: 0; /* Remove left margin */
+  }
+  
+  /* Paragraphs */
+  .markdown-content p {
+    line-height: 1.7;
+  }
+  
+  /* Blockquotes */
+  .markdown-content blockquote {
+    border-left: 5px solid #3c3e41;
+    color: #65686d;
+    line-height: 1.7;
+    margin: 15px 50px 15px 75px;
+    padding: 10px 10px 10px 15px;
+  }
+  
+  .markdown-content blockquote p {
+    margin: 0;
+  }
+  
+  /* Lists */
+  .markdown-content ul {
+    line-height: 1.7;
+    margin: 15px 0;
+    padding: 0 0 0 30px; /* Adjust padding for ul */
+    list-style-type: disc; /* Discs for unordered lists */
+  }
+  
+  .markdown-content ol {
+    line-height: 1.7;
+    margin: 15px 0;
+    padding: 0 0 0 30px; /* Adjust padding for ol */
+    list-style-type: decimal; /* Numbers for ordered lists */
+  }
+  
+  .markdown-content ul p,
+  .markdown-content ul ul,
+  .markdown-content ol p,
+  .markdown-content ol ol {
+    margin: 0;
+  }
+  
+/* Images */
+.markdown-content img {
+  display: block;      
+  margin: 15px auto;    
+  max-width: 100%;     
+  height: auto;         
+}
+rticle.css */
+
+/* Container for code blocks to manage the toggle */
+.code-block-container {
+  position: relative;
+  margin: 16px 0;
+}
+
+/* General styling for code blocks */
+.code-block-container pre {
+  position: relative;
+  max-height: 500px; /* Default max height */
+  overflow: hidden; /* Hide overflowing content */
+  background-color: #0d1117;
+  color: #f8f8f2; /* Example text color */
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Expanded state for code blocks */
+.code-block-container pre.expanded {
+  max-height: none; /* No limit when expanded */
+}
+
+/* "See More" / "See Less" link */
+.toggle-link {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+  color: #1e90ff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.toggle-link:hover {
+  color: #4682b4;
+}
+
+/* Styling for inline code */
+.markdown-content code {
+  background-color: #353e49; /* Dark gray background for inline code */
+  border-radius: 4px; /* Rounded corners */
+  padding: 2px 4px; /* Padding inside the inline code */
+}
+
+/* Styling for code blocks inside `pre` tags */
+.markdown-content pre code {
+  background-color: #0d1117; /* Consistent background for code inside pre */
+}

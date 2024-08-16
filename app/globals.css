@@ -16,6 +16,22 @@
   }
 }
 
+/* Import or include this CSS in your global styles */
+.markdown-body ol {
+  list-style-type: decimal; /* Ensures numbered lists use decimal numbers */
+  margin: 1em 0;
+  padding-left: 1.2em;
+}
+.markdown-body ul {
+  list-style-type: disc; /* Ensures unordered lists use disc markers */
+  margin: 1em 0;
+  padding-left: 1.2em;
+}
+
+.markdown-body li {
+  margin: 0.5em 0;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
