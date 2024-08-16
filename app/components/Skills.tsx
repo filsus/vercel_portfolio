@@ -234,7 +234,7 @@ const Skills: React.FC = () => {
     ]
   };
 
-  const graphRef = useRef(null);
+  const graphRef = useRef<any>(null)
   const graphWrapperRef = useRef(null);
 
   // IntersectionObserver setup

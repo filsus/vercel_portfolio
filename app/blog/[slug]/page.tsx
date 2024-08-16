@@ -11,20 +11,21 @@ import Header from '../components/Header';
 import BlogHeader from '../components/BlogHeader';
 import 'highlight.js/styles/github-dark.css';
 
-const postsDirectory = path.join(process.cwd(), 'app/blog/posts');
-
-export function getAllPostSlugs() {
-  const fileNames = fs.readdirSync(postsDirectory);
-  return fileNames
-    .filter(fileName => fileName.endsWith('.md'))
-    .map(fileName => fileName.replace(/\.md$/, '')); // Remove extension
-}
-
 async function getPostData(slug: string) {
-  const fullPath = path.join(postsDirectory, `${slug}.md`);
-  if (!fs.existsSync(fullPath)) {
-    notFound();
+
+  const postsDirectory = path.join(process.cwd(), 'app/blog/posts');
+
+  function getAllPostSlugs(): string[] {
+    const fileNames = fs.readdirSync(postsDirectory);
+    return fileNames
+      .filter(fileName => fileName.endsWith('.md'))
+      .map(fileName => fileName.replace(/\.md$/, '')); // Remove extension
   }
+    const fullPath = path.join(postsDirectory, `${slug}.md`);
+    if (!fs.existsSync(fullPath)) {
+      notFound();
+    }
+
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
