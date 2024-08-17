@@ -13,7 +13,9 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [
         {
           url: '/images/suska.png', // Default image for the blog section
-          alt: 'Blog Section'
+          alt: 'Blog Section',
+          width: 1200,
+          height: 630
         }
       ],
     },

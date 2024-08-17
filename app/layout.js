@@ -16,11 +16,11 @@ export default function RootLayout({ children }) {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={metadata.image} />
-        <meta property="og:url" content={metadata.url} />
-        <meta property="og:type" content="website" />
+        <meta property="title" content={metadata.title} />
+        <meta property="escription" content={metadata.description} />
+        <meta property="image" content={metadata.image} />
+        <meta property="url" content={metadata.url} />
+        <meta property="type" content="website" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content={metadata.image} />
