@@ -30,6 +30,7 @@ async function getAllPostsData() {
       title: data.title,
       date: data.date,
       thumbnail: data.thumbnail,
+      preview: data.preview,
       excerptHtml
     };
   });
