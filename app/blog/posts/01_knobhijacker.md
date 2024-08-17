@@ -2,6 +2,7 @@
 title: "Knob Hijacker"
 date: "10 August, 2024"
 thumbnail: "/images/posts/knobhijacker/title.gif"
+preview: "/images/posts/knobhijacker/title_preview.gif"
 github: "https://github.com/filsus/KnobHijacker"
 nukepedia: "https://www.nukepedia.com/python/nodegraph/knobhijacker"
 ---

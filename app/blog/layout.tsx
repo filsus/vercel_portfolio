@@ -12,10 +12,8 @@ export async function generateMetadata(): Promise<Metadata> {
       url: 'https://filipsuska.com/blog', // Ensure this URL is correct
       images: [
         {
-          url: '/images/suska.png', // Default image for the blog section
+          url: '/images/blog.png', // Default image for the blog section
           alt: 'Blog Section',
-          width: 500,
-          height: 500
         }
       ],
     },
@@ -23,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: 'Filip Suska - BLOG',
       description: 'Welcome to my VFX BLog. Explore my experiments in Nuke, Pipeline and ML.',
-      images: '/images/suska.png', // Default image for the blog section
+      images: '/images/blog.png', // Default image for the blog section
       site: '@yourTwitterHandle', // Replace with your Twitter handle if desired
     }
   };

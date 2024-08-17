@@ -51,6 +51,7 @@ async function getPostData(slug: string) {
     date: data.date,
     content: contentHtml,
     thumbnail: data.thumbnail,
+    preview: data.preview,
     github: data.github,
     nukepedia: data.nukepedia,
     nextPostSlug: nextSlug,
@@ -71,10 +72,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       url: postData.url, // URL for the page
       images: [
         {
-          url: postData.thumbnail,
+          url: postData.preview,
           alt: `Thumbnail for ${postData.title}`,
-          width: 1060,
-          height: 300
         }
       ]
     },
@@ -82,7 +81,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       card: 'summary_large_image', // Or 'summary' for smaller image
       title: postData.title,
       description: postData.content,
-      images: postData.thumbnail,
+      images: postData.preview,
       site: '@yourTwitterHandle', // Replace with your Twitter handle if desired
     }
   };
