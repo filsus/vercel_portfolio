@@ -64,22 +64,24 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   return {
     title: postData.title,
-    description: postData.content.slice(0, 150), // Take the first 150 characters for description
+    description: postData.content, // Take the first 150 characters for description
     openGraph: {
       title: postData.title,
-      description: postData.content.slice(0, 150),
+      description: postData.content,
       url: postData.url, // URL for the page
       images: [
         {
           url: postData.thumbnail,
-          alt: `Thumbnail for ${postData.title}`
+          alt: `Thumbnail for ${postData.title}`,
+          width: 1060,
+          height: 300
         }
       ]
     },
     twitter: {
       card: 'summary_large_image', // Or 'summary' for smaller image
       title: postData.title,
-      description: postData.content.slice(0, 150),
+      description: postData.content,
       images: postData.thumbnail,
       site: '@yourTwitterHandle', // Replace with your Twitter handle if desired
     }
