@@ -102,7 +102,7 @@ Having too many shortcuts assigned I thought using right click instead would be 
 I changed it up to keep a reference to the Node Graph widget during the `__init__` so that garbage collection does not discard it like so:
 ```python
 # /EventFilters.py
-    self.dag_parent = next((widget for widget in QtWidgets.QApplication.instance().allWidgets() if isinstance(widget, QtWidgets.QWidget)
+    self.dag_parent = next((widget for widget in QtWidgets.QApplication.instance().allWidgets() if isinstance(widget, QtWidgets.QWidget)))
 ```
 #
 
@@ -119,6 +119,7 @@ If you are not a fan of overriding your right click in NodeGraph you can disable
 import EventFilters
 FILTER = EventFilters.CustomEventFilter()
 ```
-## ANOTHER FORGOTTEN TOOL?
-
-I think there is a tool for almost everything in Nuke, but this one has some cool methods that others can utilize in the future. It's mostly a personal tool that I use for a couple of knobs on a few nodes, primarily mix_knob, different button_knobs, size_knob, and so on. It takes a bit of time to change the habit of manually entering the values, but I think it can be beneficial. It has certainly made things faster for me. Feel free to try it out if you like it, and if you have any suggestions, I am all ears—just reach out to me on my social media channels.
+#
+___
+#
+And that is it! Feel free to fork the repository and play around if interested. I am open to suggestions on how to make it better. Just reach out on social media.

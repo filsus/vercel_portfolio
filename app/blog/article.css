@@ -122,8 +122,6 @@
 /* General styling for code blocks */
 .code-block-container pre {
   position: relative;
-  max-height: 500px; /* Default max height */
-  overflow: hidden; /* Hide overflowing content */
   background-color: #0d1117;
   color: #f8f8f2; /* Example text color */
   transition: max-height 0.3s ease-in-out;
@@ -160,4 +158,6 @@
 /* Styling for code blocks inside `pre` tags */
 .markdown-content pre code {
   background-color: #0d1117; /* Consistent background for code inside pre */
+  max-height: 500px; /* Default max height */
+  overflow: auto; /* Hide overflowing content */
 }
