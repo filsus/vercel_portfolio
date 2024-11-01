@@ -16,6 +16,7 @@ export default function FilmSection() {
     { src: '/images/posters/tlm.png', link: 'https://www.imdb.com/title/tt5971474/' },
     { src: '/images/posters/bos.png', link: 'https://www.imdb.com/title/tt15435876/' },
     { src: '/images/posters/nau.png', link: 'https://www.imdb.com/title/tt15286302/' },
+    { src: '/images/posters/gol.png', link: 'https://www.imdb.com/title/tt7661390/episodes/?season=3' },
   ];
 
     const FAST_DURATION = 25;
